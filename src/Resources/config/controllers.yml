@@ -1,0 +1,16 @@
+services:
+  controller.get.setting:
+    class: App\Controller\GetSettingController
+    public: true
+    tags: ['controller.service_arguments']
+    arguments:
+      - '@service.client'
+      - '@serializer'
+
+  controller.set.setting:
+    class: App\Controller\SetSettingController
+    public: true
+    tags: ['controller.service_arguments']
+    arguments:
+      - '@service.client'
+      - '@serializer'

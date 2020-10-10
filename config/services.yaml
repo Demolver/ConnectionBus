@@ -1,0 +1,4 @@
+parameters:
+    rest.url: '%env(REST_URL)%'
+    http.url: '%env(HTTP_URL)%'
+    grpc.url: '%env(GRPC_URL)%'
