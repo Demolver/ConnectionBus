@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.grpc.examples.routeguide";
+option java_outer_classname = "RouteGuideProto";
+option objc_class_prefix = "RTG";
+
+package grpc;
+
+service GrpcClient {
+  rpc get(stream GrpcRequest) returns (GrpcRequest) {}
+  rpc set(GrpcRequest) returns (stream GrpcRequest) {}
+}
+
+message GrpcRequest {
+  string fieldOne = 1;
+  bool fieldTwo = 2;
+  int32 fieldThree = 3;
+}
