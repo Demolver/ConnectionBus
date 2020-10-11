@@ -53,7 +53,7 @@ class SettingGrpcClient implements ClientConnectionInterface
         $feature = $this->client->get()->wait();
 
         /**@var GrpcSettingDto $result */
-        $result = $this->serializer->deserialize($feature,GrpcSettingDto::class,JsonEncoder::FORMAT);
+        $result = $this->serializer->deserialize($feature, GrpcSettingDto::class, JsonEncoder::FORMAT);
 
         return $result;
     }

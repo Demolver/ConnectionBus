@@ -14,7 +14,7 @@ Using Docker.
 
 4) Crete .env using .env.example
 
-5) Got to `http://127.0.0.1:81/api/doc`. Swagger documentation.
+5) Go to `http://127.0.0.1:81/api/doc`. Swagger documentation.
 
 Execute test `docker-compose exec services-php composer test`
 Execute fixer `docker-compose exec services-php composer fix`

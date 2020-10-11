@@ -11,7 +11,7 @@ interface ClientConnectionInterface
     /**
      * @param SettingDtoInterface $dto
      */
-    public function setSettings(SettingDtoInterface $dto): void ;
+    public function setSettings(SettingDtoInterface $dto): void;
 
     /**
      * @return SettingDtoInterface
