@@ -1,22 +1,4 @@
 {
-    "amphp/amp": {
-        "version": "v2.5.0"
-    },
-    "amphp/byte-stream": {
-        "version": "v1.8.0"
-    },
-    "composer/package-versions-deprecated": {
-        "version": "1.11.99"
-    },
-    "composer/semver": {
-        "version": "3.2.1"
-    },
-    "composer/xdebug-handler": {
-        "version": "1.4.3"
-    },
-    "dnoegel/php-xdg-base-dir": {
-        "version": "v0.1.1"
-    },
     "doctrine/annotations": {
         "version": "1.0",
         "recipe": {
@@ -40,12 +22,6 @@
     },
     "exsyst/swagger": {
         "version": "v0.4.1"
-    },
-    "felixfbecker/advanced-json-rpc": {
-        "version": "v3.1.1"
-    },
-    "felixfbecker/language-server-protocol": {
-        "version": "v1.4.0"
     },
     "google/protobuf": {
         "version": "v3.13.0"
@@ -78,14 +54,8 @@
             "config/routes/nelmio_api_doc.yaml"
         ]
     },
-    "netresearch/jsonmapper": {
-        "version": "v2.1.0"
-    },
     "nikic/php-parser": {
         "version": "v4.10.2"
-    },
-    "openlss/lib-array2xml": {
-        "version": "1.0.0"
     },
     "phar-io/manifest": {
         "version": "2.0.1"
@@ -416,17 +386,8 @@
     "twig/twig": {
         "version": "v3.0.5"
     },
-    "vimeo/psalm": {
-        "version": "3.16"
-    },
     "webmozart/assert": {
         "version": "1.9.1"
-    },
-    "webmozart/glob": {
-        "version": "4.1.0"
-    },
-    "webmozart/path-util": {
-        "version": "2.3.0"
     },
     "zircote/swagger-php": {
         "version": "2.0.16"

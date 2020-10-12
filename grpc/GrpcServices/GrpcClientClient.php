@@ -1,7 +1,7 @@
 <?php
 // GENERATED CODE -- DO NOT EDIT!
 
-namespace Grpc;
+namespace GrpcServices;
 
 /**
  */
@@ -22,22 +22,22 @@ class GrpcClientClient extends \Grpc\BaseStub {
      * @return \Grpc\ClientStreamingCall
      */
     public function get($metadata = [], $options = []) {
-        return $this->_clientStreamRequest('/grpc.GrpcClient/get',
-        ['\Grpc\GrpcRequest','decode'],
+        return $this->_clientStreamRequest('/grpcServices.GrpcClient/get',
+        ['\GrpcServices\GrpcRequest','decode'],
         $metadata, $options);
     }
 
     /**
-     * @param \Grpc\GrpcRequest $argument input argument
+     * @param \GrpcServices\GrpcRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\ServerStreamingCall
      */
-    public function set(\Grpc\GrpcRequest $argument,
+    public function set(\GrpcServices\GrpcRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_serverStreamRequest('/grpc.GrpcClient/set',
+        return $this->_serverStreamRequest('/grpcServices.GrpcClient/set',
         $argument,
-        ['\Grpc\GrpcRequest', 'decode'],
+        ['\GrpcServices\GrpcRequest', 'decode'],
         $metadata, $options);
     }
 

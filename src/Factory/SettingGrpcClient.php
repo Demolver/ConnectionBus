@@ -7,8 +7,8 @@ namespace App\Factory;
 use App\Dto\GrpcSettingDto;
 use App\Dto\SettingDtoInterface;
 use Grpc\ChannelCredentials;
-use Grpc\GrpcClientClient;
-use Grpc\GrpcRequest;
+use GrpcServices\GrpcClientClient;
+use GrpcServices\GrpcRequest;
 use Symfony\Component\Serializer\Encoder\JsonEncoder;
 use Symfony\Component\Serializer\SerializerInterface;
 
