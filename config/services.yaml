@@ -2,3 +2,58 @@ parameters:
     rest.url: '%env(REST_URL)%'
     http.url: '%env(HTTP_URL)%'
     grpc.url: '%env(GRPC_URL)%'
+
+services:
+    guzzle.client:
+        class: GuzzleHttp\Client
+
+    service.http.client:
+        class: App\Service\HttpClientService
+        arguments:
+            - '@guzzle.client'
+
+    setting.rest.client:
+        class: App\Factory\SettingRestClient
+        arguments:
+            - '@service.http.client'
+            - '@serializer'
+            - '%rest.url%'
+
+    setting.http.client:
+        class: App\Factory\SettingHttpClient
+        arguments:
+            - '@service.http.client'
+            - '@serializer'
+            - '%http.url%'
+
+    setting.grpc.client:
+        class: App\Factory\SettingGrpcClient
+        arguments:
+            - '@serializer'
+            - '%grpc.url%'
+
+    setting.client.factory:
+        class: App\Factory\SettingClientFactory
+        arguments:
+            - '@setting.rest.client'
+            - '@setting.grpc.client'
+            - '@setting.http.client'
+
+    service.client:
+        class: App\Service\ClientService
+        arguments:
+            - '@setting.client.factory'
+
+    App\Controller\GetSettingController:
+        public: true
+        tags: ['controller.service_arguments']
+        arguments:
+            - '@service.client'
+            - '@serializer'
+
+    App\Controller\SetSettingController:
+        public: true
+        tags: ['controller.service_arguments']
+        arguments:
+            - '@service.client'
+            - '@serializer'

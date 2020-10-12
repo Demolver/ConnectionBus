@@ -10,7 +10,7 @@ services:
   setting.rest.client:
     class: App\Factory\SettingRestClient
     arguments:
-      - '@service.http.client',
+      - '@service.http.client'
       - '@serializer'
       - '%rest.url%'
 
